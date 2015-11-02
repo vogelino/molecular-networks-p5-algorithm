@@ -1,0 +1,18 @@
+{
+  "name": "family-unity-look",
+  "version": "1.0.0",
+  "description": "How does the unity of your familiy look like?",
+  "main": "sketch.js",
+  "dependencies": {
+    "p5": "^0.4.17"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "p5"
+  ],
+  "author": "vogelino",
+  "license": "WTFPL-2.0"
+}
