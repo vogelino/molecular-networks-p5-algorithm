@@ -1,18 +1,26 @@
 {
-  "name": "family-unity-look",
+  "name": "p5js-starter-kit",
   "version": "1.0.0",
-  "description": "How does the unity of your familiy look like?",
+  "description": "getting started",
   "main": "sketch.js",
-  "dependencies": {
-    "p5": "^0.4.17"
+  "dependencies": {},
+  "devDependencies": {
+    "babel-preset-es2015": "^6.1.2",
+    "nib": "latest",
+    "stylus": "latest"
   },
-  "devDependencies": {},
   "scripts": {
+    "start": "npm run build",
+    "build:copy": "cp ./src/index.html ./public/index.html",
+    "build:browserify": "babel ./src/sketch.js -o ./public/sketch.js",
+    "build:stylus": "stylus -u nib ./src/main.styl > ./public/main.css",
+    "build:css": "npm run build:stylus",
+    "build": "npm run build:copy && npm run build:css && npm run build:browserify",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "p5"
   ],
-  "author": "vogelino",
-  "license": "WTFPL-2.0"
+  "author": "fabiantheblind",
+  "license": "ISC"
 }
