@@ -9,80 +9,48 @@ function setup() {
 	colorMode(HSB, 360, 100, 100, 100);
 
 	props = getDefaults();
-	props.arcPoints.arcColor = getColor(30);
 
-	generateEllipses();
+	background(props.backgroundColor);
+	for (var i = 0; i < random(20, 20); i++) {
+		generateEllipses();
+	}
 }
 
 function draw() {
-
-	props.ellipses.forEach((theEllipse) => {
-		drawEllipse(theEllipse);
-	});
-
-	props.ellipses.forEach((theEllipse, index) => {
-		drawConnections(theEllipse, index);
-	});
-
 	noLoop();
 }
 
 function getDefaults() {
 	return {
 		maxClusterDepth: 3,
-		ellipsesDistance: 10,
-		arcPoints: {
-			arcColor: getColor(20),
-			arcWidth: 6
-		},
+		ellipsesDistance: random(1, 15),
+		arcWidth: 3,
+		arcStrokeWeigth: 1,
 		defaults : {
 			ellipse: { x: 0, y: 0, size: 0, ellipseColor: getColor() }
 		},
-		backgroundColor: getColor(100),
+		backgroundColor: 'whitesmoke',
 		ellipses: []
 	};
 }
 
-function getExtremeArcPoints(firstEllipse, nextEllipse) {
-	let nextPos = {
-		higher: firstEllipse.y > nextEllipse.y,
-		lower: firstEllipse.y < nextEllipse.y,
-		after: firstEllipse.x < nextEllipse.x,
-		before: firstEllipse.x > nextEllipse.x
-	};
-	let points = { start: {}, end: {} };
+function getExtremeArcPoints(firstEllipse, nextEllipse, dir) {
+	let points = {};
+	points.start = firstEllipse.arcPoints[dir];
 
-	if (nextPos.higher && nextPos.after) {
-		points.start = firstEllipse.arcPoints.top;
-		points.end = nextEllipse.arcPoints.left;
-	}
-	else if (nextPos.lower && nextPos.after) {
-		points.start = firstEllipse.arcPoints.bottom;
-		points.end = nextEllipse.arcPoints.top;
-	}
-	else if (nextPos.lower && nextPos.before) {
-		points.start = firstEllipse.arcPoints.bottom;
-		points.end = nextEllipse.arcPoints.right;
-	}
-	else if (nextPos.higher && nextPos.before) {
-		points.start = firstEllipse.arcPoints.left;
-		points.end = nextEllipse.arcPoints.bottom;
-	}
-	else if (!nextPos.higher && !nextPos.lower && nextPos.after) {
-		points.start = firstEllipse.arcPoints.right;
-		points.end = nextEllipse.arcPoints.left;
-	}
-	else if (!nextPos.higher && !nextPos.lower && nextPos.before) {
-		points.start = firstEllipse.arcPoints.left;
-		points.end = nextEllipse.arcPoints.right;
-	}
-	else if (!nextPos.after && !nextPos.before && nextPos.higher) {
-		points.start = firstEllipse.arcPoints.top;
-		points.end = nextEllipse.arcPoints.bottom;
-	}
-	else if (!nextPos.after && !nextPos.before && nextPos.lower) {
-		points.start = firstEllipse.arcPoints.bottom;
-		points.end = nextEllipse.arcPoints.top;
+	switch(dir) {
+		case 'right':
+			points.end = nextEllipse.arcPoints.left;
+		break;
+		case 'left':
+			points.end = nextEllipse.arcPoints.right;
+		break;
+		case 'top':
+			points.end = nextEllipse.arcPoints.bottom;
+		break;
+		case 'bottom':
+			points.end = nextEllipse.arcPoints.top;
+		break;
 	}
 
 	return points;
@@ -90,44 +58,18 @@ function getExtremeArcPoints(firstEllipse, nextEllipse) {
 
 function drawEllipse(theEllipse) {
 	let { x, y, size, ellipseColor } = theEllipse;
-	let ellipseCenter = size / 2;
 	noStroke();
 	fill(ellipseColor);
 	ellipse(x, y, size, size);
-	theEllipse.arcPoints = {
-		top: {x, y: y - ellipseCenter},
-		bottom: {x, y: y + ellipseCenter},
-		left: {x: x - ellipseCenter, y},
-		right: {x: x + ellipseCenter, y}
-	};
-
-	let { arcColor, arcWidth } = props.arcPoints;
-	let { top, bottom, left, right } = theEllipse.arcPoints;
-
-	noStroke();
-	fill(arcColor);
-	ellipse(top.x, top.y, arcWidth, arcWidth);
-	ellipse(bottom.x, bottom.y, arcWidth, arcWidth);
-	ellipse(left.x, left.y, arcWidth, arcWidth);
-	ellipse(right.x, right.y, arcWidth, arcWidth);
 }
 
-function drawConnections(theEllipse, index) {
-	let nextEllipse = props.ellipses[index + 1];
-	if (!nextEllipse) { return; }
-	let { start, end } = getExtremeArcPoints(theEllipse, nextEllipse);
-
-	let pointsXDistance = (end.x - start.x);
-	let pointsYDistance = (end.y - start.y);
-	let diagonalDistance = Math.sqrt(Math.pow(pointsXDistance, 2) + Math.pow(pointsYDistance, 2))
-	let centerInX = (end.x - start.x) / 2;
-	let centerInY = (end.y - start.y) / 2;
-
-	let { arcColor, arcWidth } = props.arcPoints;
+function drawConnections(baseEllipse, nextEllipse, dir) {
+	let { start, end } = getExtremeArcPoints(baseEllipse, nextEllipse, dir);
+	let { arcWidth, arcStrokeWeigth } = props;
 	noFill()
-	stroke(arcColor);
-	strokeWeight(2);
-	line(start.x, start.y, end.x, end.y)
+	stroke(baseEllipse.ellipseColor);
+	strokeWeight(arcStrokeWeigth);
+	line(start.x, start.y, end.x, end.y);
 }
 
 function addElipse(x , y, size, ellipseColor) {
@@ -135,21 +77,31 @@ function addElipse(x , y, size, ellipseColor) {
 	y = y ? y : props.defaults.ellipse.x,
 	size = size ? size : props.defaults.ellipse.size,
 	ellipseColor = ellipseColor ? ellipseColor : props.defaults.ellipse.color
-	props.ellipses.push({ x, y, size, ellipseColor });
+	let ellipseCenter = size / 2;
+	let arcPoints = {
+		top: {x, y: y - ellipseCenter},
+		bottom: {x, y: y + ellipseCenter},
+		left: {x: x - ellipseCenter, y},
+		right: {x: x + ellipseCenter, y}
+	};
+	props.ellipses.push({ x, y, size, ellipseColor, arcPoints });
 	return props.ellipses[props.ellipses.length - 1];
 }
 
 function getColor(bri, hue, sat, alpha) {
-	bri = bri ? bri : random(75, 100);
-	hue = hue ? hue : random(110, 210);
-	sat = sat ? sat : random(66, 100);
+	bri = bri ? bri : random(50, 75);
+	hue = hue ? hue : random(190, 200);
+	sat = sat ? sat : random(33, 66);
 	alpha = alpha ? alpha : 100;
 	return color(hue, sat, bri, alpha);
 }
 
 function generateEllipses() {
-	let startSize = height / 18;
-	let startEllipse = addElipse(width / 2, height / 2, startSize, getColor());
+	let startSize = random(10,100);
+	let randomPosX = random(0, width);
+	let randomPosY = random(0, height);
+	let startEllipse = addElipse(randomPosX, randomPosY, startSize, getColor());
+	drawEllipse(startEllipse);
 
 	createSiblings('top', 1, startEllipse);
 	createSiblings('bottom', 1, startEllipse);
@@ -158,11 +110,12 @@ function generateEllipses() {
 }
 
 function createSiblings(dir, level, baseEllipse) {
-	if (level >= props.maxClusterDepth) { return; }
+	if (level >= random(1, 4)) { return; }
 
 	let {x, y, size, ellipseColor} = baseEllipse;
-	let newSize = size * 0.8;
-	let newDistance = props.ellipsesDistance * level;
+	let newSize = size * 0.6;
+	let ellipsesDistance = random(props.ellipsesDistance - 5, props.ellipsesDistance + 5);
+	let newDistance = ellipsesDistance * level * 1.5;
 	let sibling;
 
 	if (dir === 'right') {
@@ -190,9 +143,16 @@ function createSiblings(dir, level, baseEllipse) {
 		};
 	}
 	sibling.size = newSize;
-	sibling.ellipseColor = getColor();
+	sibling.ellipseColor = color(
+		baseEllipse.ellipseColor.getHue(),
+		baseEllipse.ellipseColor.getSaturation() - (level * 2),
+		baseEllipse.ellipseColor.getBrightness() + (level * 4),
+		baseEllipse.ellipseColor.getAlpha()
+	);
 
-	addElipse(sibling.x, sibling.y, sibling.size, sibling.ellipseColor);
+	sibling = addElipse(sibling.x, sibling.y, sibling.size, sibling.ellipseColor);
+	drawEllipse(sibling);
+	drawConnections(baseEllipse, sibling, dir);
 	switch(dir) {
 		case 'right':
 			createSiblings('top', level + 1, sibling);
