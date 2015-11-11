@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "getting started",
   "main": "sketch.js",
-  "dependencies": {},
+  "dependencies": {
+    "p5": "^0.4.18"
+  },
   "devDependencies": {
     "babel-preset-es2015": "^6.1.2",
     "gulp": "^3.9.0",

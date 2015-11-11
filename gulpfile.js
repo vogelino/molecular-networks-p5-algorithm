@@ -23,7 +23,8 @@ var dest = './public';
 var paths = {
 	scripts: [src + 'sketch.js'],
 	html: [src + 'index.html'],
-	stylus: [src + 'main.styl']
+	stylus: [src + 'main.styl'],
+	jsLibs: ['node_modules/p5/lib/p5.min.js']
 };
 
 gulp.task('clean', function(cb) {
@@ -56,7 +57,13 @@ gulp.task('es6', function() {
 		.pipe(gulp.dest(dest));
 });
 
-gulp.task('default',['clean', 'es6', 'stylus', 'html'],function(done) {
+gulp.task('libs', function() {
+	return gulp.src(paths.jsLibs)
+		.pipe(gulp.dest(dest + '/lib'))
+		.on('error', throwError);
+});
+
+gulp.task('default',['clean', 'libs', 'es6', 'stylus', 'html'],function(done) {
 	http.createServer(
 		st({ index: 'index.html', cache: false, path: dest })
 	).listen(8080, done);
