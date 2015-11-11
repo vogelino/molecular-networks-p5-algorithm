@@ -6,7 +6,9 @@ cd students/vogelino
 npm install
 npm start
 ```
-The open your browser at following url
+Then open your browser at following url to use watch
 `http://localhost:8080`
+
+Or open the `index.html` file in the public folder.
 
 WTFPL-2.0
