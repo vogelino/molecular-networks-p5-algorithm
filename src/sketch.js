@@ -187,10 +187,10 @@ function getColor(bri, hue, sat, alpha) {
 }
 
 function generateGroups() {
-	let rows = Math.floor(random(2,10));
-	let columns = Math.floor(random(2,10));
-	let formPosX = Math.floor(random(1, 30)) * props.wrapperSize;
-	let formPosY = Math.floor(random(1, 15)) * props.wrapperSize;
+	let rows = Math.floor(width / props.wrapperSize);
+	let columns = Math.floor(width / props.wrapperSize);
+	let formPosX = 0;
+	let formPosY = 0;
 	let columnPosX = formPosX;
 	let rowPosY = formPosY;
 	let forms = [];
