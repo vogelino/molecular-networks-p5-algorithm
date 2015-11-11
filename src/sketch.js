@@ -11,10 +11,12 @@ function setup() {
 	props = getDefaults();
 
 	background(props.backgroundColor);
+	props.mainColor = getColor(90, false, 0);
 	generateGroups();
-	props.groups.forEach((group) => {
-		drawConnections(group);
-	});
+	drawConnections(props.groups[0]);
+	props.mainColor = getColor(30, false, 0);
+	generateGroups();
+	drawConnections(props.groups[1]);
 }
 
 function draw() {
@@ -34,7 +36,9 @@ function getDefaults() {
 		},
 		backgroundColor: 'whitesmoke',
 		groups: [],
-		wrapperSize: 50
+		wrapperSize: 50,
+		colorIndex: 0,
+		mainColor: getColor()
 	};
 }
 
@@ -107,7 +111,6 @@ function drawConnection(dir, startForm, endForm) {
 	if (!startForm.circle || !endForm.circle) { return; }
 	let startPoint = {};
 	let endPoint = {};
-	console.log(startForm.circle.arcPoints, endForm.circle.arcPoints);
 	switch(dir) {
 		case 'right':
 			startPoint = startForm.circle.arcPoints.right;
@@ -133,7 +136,7 @@ function drawConnection(dir, startForm, endForm) {
 }
 
 function addForm(id, x , y, size, row, column) {
-	let hasCircle = Math.floor(random(0,3)) === 1;
+	let hasCircle = random(0,2) < 1;
 	let circleSize = random(props.circleMinSize, props.wrapperSize - 5);
 	let circleX = x + (props.wrapperSize / 2);
 	let circleY = y + (props.wrapperSize / 2);
@@ -147,7 +150,7 @@ function addForm(id, x , y, size, row, column) {
 			x: circleX,
 			y: circleY,
 			size: circleSize,
-			circleColor: getColor()
+			circleColor: props.mainColor
 		}
 	};
 	if (form.circle) {
@@ -179,10 +182,10 @@ function getFormByPosition(group, row, column) {
 }
 
 function getColor(bri, hue, sat, alpha) {
-	bri = bri ? bri : random(50, 75);
-	hue = hue ? hue : random(190, 200);
-	sat = sat ? sat : random(33, 66);
-	alpha = alpha ? alpha : 100;
+	bri = bri >= 0 ? bri : random(50, 75);
+	hue = hue >= 0 ? hue : random(190, 200);
+	sat = sat >= 0 ? sat : random(33, 66);
+	alpha = alpha >= 0 ? alpha : 100;
 	return color(hue, sat, bri, alpha);
 }
 
