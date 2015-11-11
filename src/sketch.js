@@ -1,6 +1,5 @@
 // BASE VARIABLES
 let props = {
-	groups: [],
 	groupsAmount: 3,
 	availableFormId: 0,
 	circleMinSize: 10,
@@ -8,7 +7,7 @@ let props = {
 	backgroundColor: 'whitesmoke',
 	wrapperSize: 50,
 	colorIndex: 0,
-	mainBrightness: 90,
+	mainBrightness: 50,
 	mainColor: false
 };
 
@@ -19,9 +18,8 @@ function setup() {
 	background(props.backgroundColor);
 	props.mainColor = color(0, 0, props.mainBrightness, 100);
 
-	console.log(`Generating ${props.groupsAmount} groups`);
-	props.groups = addGroups(props.groupsAmount);
-	console.log(`${props.groupsAmount} groups generated`);
+	let groups = getGroups(props.groupsAmount);
+	drawGroups(groups);
 }
 
 function draw() {
@@ -34,20 +32,15 @@ function initCanvas() {
 }
 
 // GENERATE CONTENTS
-function addGroups(groupsAmount) {
+function getGroups(groupsAmount) {
 	let groups = [];
 	for (var i = 1; i <= groupsAmount; i++) {
-		let { mainBrightness, mainColor } = props;
-		let oldBrightness = mainColor._getBrightness();
-		groups.push(addGroup(i));
-		let newBrightness = oldBrightness - (i * (groupsAmount * (groupsAmount * i)));
-
-		props.mainColor = color(0, 0, newBrightness, 100);
+		groups.push(getGroup(i));
 	}
 	return groups;
 }
 
-function addGroup(id) {
+function getGroup(id) {
 	let rows = Math.ceil(width / props.wrapperSize) + 1;
 	let columns = Math.ceil(width / props.wrapperSize) + 1;
 	let formPosX = 0 - (props.wrapperSize / 2);
@@ -55,11 +48,10 @@ function addGroup(id) {
 	let columnPosX = formPosX;
 	let rowPosY = formPosY;
 	let forms = [];
-	let groupId = props.groups.length;
 
 	for (let row = 1; row <= rows; row++) {
 		for (let column = 1; column <= columns; column++) {
-			let form = addForm(
+			let form = getForm(
 				props.availableFormId,
 				props.mainColor,
 				columnPosX,
@@ -88,7 +80,7 @@ function addGroup(id) {
 	return group;
 }
 
-function addForm(id, circleColor, x , y, size, row, column) {
+function getForm(id, circleColor, x , y, size, row, column) {
 	let hasCircle = random(0,2) < 1;
 	let circleSize = random(props.circleMinSize, props.wrapperSize - 5);
 	let circleX = x + (props.wrapperSize / 2);
@@ -116,7 +108,6 @@ function addForm(id, circleColor, x , y, size, row, column) {
 		};
 	}
 
-	drawForm(form);
 	return form;
 }
 
@@ -144,10 +135,8 @@ function getExtremeArcPoints(firstCircle, nextCircle) {
 
 function drawForm(wrapper) {
 	let { x, y, circle } = wrapper;
-	noFill();
-	noStroke();
-	rect(x, y, props.wrapperSize, props.wrapperSize);
 	if (circle) {
+		// drawWrapper(x, y, props.wrapperSize);
 		noFill();
 		stroke(circle.circleColor);
 		strokeWeight(props.lineWeight);
@@ -155,11 +144,17 @@ function drawForm(wrapper) {
 	}
 }
 
+function drawWrapper(x, y, size) {
+	stroke(0,0,0,100);
+	strokeWeight(1);
+	rect(x, y, size, size);
+}
+
 function addConnections(group) {
 	let connections = [];
 	let { columns, rows } = group;
 
-	group.forms.forEach((form, index) => {
+	group.forms.forEach((form) => {
 		let isFirstColumn = form.column === 1;
 		let isFirstRow = form.row === 1;
 		let isLastRow = form.row === rows;
@@ -215,6 +210,23 @@ function addConnection(dir, startForm, endForm) {
 	line(startPoint.x, startPoint.y, endPoint.x, endPoint.y);
 
 	return { startPoint, endPoint };
+}
+
+function drawGroups(groups) {
+	groups.forEach((group, i) => {
+		drawGroup(group);
+
+		let { mainBrightness, mainColor, groupsAmount } = props;
+		let oldBrightness = mainColor._getBrightness();
+		let newBrightness = oldBrightness - (i * (groupsAmount * (groupsAmount * i)));
+		props.mainColor = color(0, 0, newBrightness, 100);
+	});
+}
+
+function drawGroup(group) {
+	group.forms.forEach((form) => {
+		drawForm(form);
+	});
 }
 
 // GETTERS
