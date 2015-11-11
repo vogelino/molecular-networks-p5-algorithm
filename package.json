@@ -11,6 +11,7 @@
     "gulp-livereload": "^3.8.1",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-stylus": "^2.1.0",
+    "gulp-util": "^3.0.7",
     "http": "0.0.0",
     "nib": "latest",
     "rimraf": "^2.4.3",

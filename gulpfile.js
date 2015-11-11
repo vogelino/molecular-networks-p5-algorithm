@@ -5,7 +5,18 @@ var gulp = require('gulp'),
 	stylus = require('gulp-stylus'),
 	sourcemaps = require('gulp-sourcemaps'),
 	rimraf = require('rimraf'),
-	st = require('st');
+	st = require('st'),
+	gutil = require('gulp-util');
+
+function throwError(err) {
+	'use strict';
+	gutil.log(gutil.colors.red(err));
+}
+
+function warn(msg) {
+	'use strict';
+	gutil.log(gutil.colors.yellow(msg));
+}
 
 var src = './src/';
 var dest = './public';
@@ -22,12 +33,7 @@ gulp.task('clean', function(cb) {
 gulp.task('html', function() {
 	return gulp.src(paths.html)
 		.pipe(gulp.dest(dest))
-		.pipe(livereload());
-});
-
-gulp.task('js', ['es6'], function() {
-	return gulp.src(paths.scripts)
-		.pipe(gulp.dest(dest))
+		.on('error', throwError)
 		.pipe(livereload());
 });
 
@@ -35,6 +41,7 @@ gulp.task('stylus', function() {
 	return gulp.src(paths.stylus)
 		.pipe(sourcemaps.init())
 		.pipe(stylus())
+		.on('error', throwError)
 		.pipe(gulp.dest(dest))
 		.pipe(livereload());
 });
@@ -45,15 +52,16 @@ gulp.task('es6', function() {
 			sourceMaps: true,
 			presets: ['es2015']
 		}))
+		.on('error', throwError)
 		.pipe(gulp.dest(dest));
 });
 
-gulp.task('default',['clean', 'js', 'stylus', 'html'],function(done) {
+gulp.task('default',['clean', 'es6', 'stylus', 'html'],function(done) {
 	http.createServer(
 		st({ index: 'index.html', cache: false, path: dest })
 	).listen(8080, done);
 	livereload.listen();
-	gulp.watch(paths.scripts, ['js']);
+	gulp.watch(paths.scripts, ['es6']);
 	gulp.watch(paths.stylus, ['stylus']);
 	gulp.watch(paths.html, ['html']);
 });
