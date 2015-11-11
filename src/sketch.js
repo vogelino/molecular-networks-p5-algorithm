@@ -14,9 +14,14 @@ function setup() {
 	props.mainColor = getColor(90, false, 0);
 	generateGroups();
 	drawConnections(props.groups[0]);
-	props.mainColor = getColor(30, false, 0);
+
+	props.mainColor = getColor(75, false, 0);
 	generateGroups();
 	drawConnections(props.groups[1]);
+
+	props.mainColor = getColor(30, false, 0);
+	generateGroups();
+	drawConnections(props.groups[2]);
 }
 
 function draw() {
@@ -26,14 +31,8 @@ function draw() {
 function getDefaults() {
 	return {
 		availableFormId: 0,
-		maxClusterDepth: 3,
-		circlesDistance: random(1, 15),
 		circleMinSize: 10,
-		arcWidth: 3,
-		arcStrokeWeigth: 1,
-		defaults : {
-			circle: { x: 0, y: 0, size: 0, circleColor: getColor() }
-		},
+		connectionWeight: 2,
 		backgroundColor: 'whitesmoke',
 		groups: [],
 		wrapperSize: 50,
@@ -66,12 +65,10 @@ function getExtremeArcPoints(firstCircle, nextCircle) {
 
 function drawForm(wrapper) {
 	let { x, y, circle } = wrapper;
-	stroke('whitesmoke');
-	strokeWeight(1);
 	noFill();
+	noStroke();
 	rect(x, y, props.wrapperSize, props.wrapperSize);
 	if (circle) {
-		noStroke();
 		fill(circle.circleColor);
 		ellipse(circle.x, circle.y, circle.size, circle.size);
 	}
@@ -131,7 +128,7 @@ function drawConnection(dir, startForm, endForm) {
 	}
 
 	stroke(endForm.circle.circleColor);
-	strokeWeight(props.arcStrokeWeigth);
+	strokeWeight(props.connectionWeight);
 	line(startPoint.x, startPoint.y, endPoint.x, endPoint.y);
 }
 
