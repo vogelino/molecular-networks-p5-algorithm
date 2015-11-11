@@ -1,5 +1,7 @@
+'use strict';
+
 // BASE VARIABLES
-let props = {
+var props = {
 	groups: [],
 	groupsAmount: 3,
 	availableFormId: 0,
@@ -19,9 +21,9 @@ function setup() {
 	background(props.backgroundColor);
 	props.mainColor = color(0, 0, props.mainBrightness, 100);
 
-	console.log(`Generating ${props.groupsAmount} groups`);
+	console.log('Generating ' + props.groupsAmount + ' groups');
 	props.groups = addGroups(props.groupsAmount);
-	console.log(`${props.groupsAmount} groups generated`);
+	console.log(props.groupsAmount + ' groups generated');
 }
 
 function draw() {
@@ -35,12 +37,14 @@ function initCanvas() {
 
 // GENERATE CONTENTS
 function addGroups(groupsAmount) {
-	let groups = [];
+	var groups = [];
 	for (var i = 1; i <= groupsAmount; i++) {
-		let { mainBrightness, mainColor } = props;
-		let oldBrightness = mainColor._getBrightness();
+		var mainBrightness = props.mainBrightness;
+		var mainColor = props.mainColor;
+
+		var oldBrightness = mainColor._getBrightness();
 		groups.push(addGroup(i));
-		let newBrightness = oldBrightness - (i * (groupsAmount * (groupsAmount * i)));
+		var newBrightness = oldBrightness - i * (groupsAmount * (groupsAmount * i));
 
 		props.mainColor = color(0, 0, newBrightness, 100);
 	}
@@ -48,26 +52,18 @@ function addGroups(groupsAmount) {
 }
 
 function addGroup(id) {
-	let rows = Math.ceil(width / props.wrapperSize) + 1;
-	let columns = Math.ceil(width / props.wrapperSize) + 1;
-	let formPosX = 0 - (props.wrapperSize / 2);
-	let formPosY = formPosX;
-	let columnPosX = formPosX;
-	let rowPosY = formPosY;
-	let forms = [];
-	let groupId = props.groups.length;
+	var rows = Math.ceil(width / props.wrapperSize) + 1;
+	var columns = Math.ceil(width / props.wrapperSize) + 1;
+	var formPosX = 0 - props.wrapperSize / 2;
+	var formPosY = formPosX;
+	var columnPosX = formPosX;
+	var rowPosY = formPosY;
+	var forms = [];
+	var groupId = props.groups.length;
 
-	for (let row = 1; row <= rows; row++) {
-		for (let column = 1; column <= columns; column++) {
-			let form = addForm(
-				props.availableFormId,
-				props.mainColor,
-				columnPosX,
-				rowPosY,
-				props.wrapperSize,
-				row,
-				column
-			);
+	for (var row = 1; row <= rows; row++) {
+		for (var column = 1; column <= columns; column++) {
+			var form = addForm(props.availableFormId, props.mainColor, columnPosX, rowPosY, props.wrapperSize, row, column);
 			forms.push(form);
 			columnPosX = column === columns ? formPosX : columnPosX + props.wrapperSize;
 			props.availableFormId++;
@@ -75,8 +71,8 @@ function addGroup(id) {
 		rowPosY = row === rows ? formPosY : rowPosY + props.wrapperSize;
 	};
 
-	let group = {
-		id,
+	var group = {
+		id: id,
 		rows: rows,
 		columns: columns,
 		forms: forms
@@ -84,35 +80,35 @@ function addGroup(id) {
 
 	group.connections = addConnections(group);
 
-	console.log(`Generated Group with id: ${group.id}`, group);
+	console.log('Generated Group with id: ' + group.id, group);
 	return group;
 }
 
-function addForm(id, circleColor, x , y, size, row, column) {
-	let hasCircle = random(0,2) < 1;
-	let circleSize = random(props.circleMinSize, props.wrapperSize - 5);
-	let circleX = x + (props.wrapperSize / 2);
-	let circleY = y + (props.wrapperSize / 2);
-	let form = {
-		id,
-		x,
-		y,
-		row,
-		column,
+function addForm(id, circleColor, x, y, size, row, column) {
+	var hasCircle = random(0, 2) < 1;
+	var circleSize = random(props.circleMinSize, props.wrapperSize - 5);
+	var circleX = x + props.wrapperSize / 2;
+	var circleY = y + props.wrapperSize / 2;
+	var form = {
+		id: id,
+		x: x,
+		y: y,
+		row: row,
+		column: column,
 		circle: hasCircle ? false : {
 			x: circleX,
 			y: circleY,
 			size: circleSize,
-			circleColor
+			circleColor: circleColor
 		}
 	};
 	if (form.circle) {
-		let circleCenter = circleSize / 2;
+		var circleCenter = circleSize / 2;
 		form.circle.arcPoints = {
-			top: {x: circleX, y: circleY - circleCenter},
-			bottom: {x: circleX, y: circleY + circleCenter},
-			left: {x: circleX - circleCenter, y: circleY},
-			right: {x: circleX + circleCenter, y: circleY}
+			top: { x: circleX, y: circleY - circleCenter },
+			bottom: { x: circleX, y: circleY + circleCenter },
+			left: { x: circleX - circleCenter, y: circleY },
+			right: { x: circleX + circleCenter, y: circleY }
 		};
 	}
 
@@ -121,29 +117,32 @@ function addForm(id, circleColor, x , y, size, row, column) {
 }
 
 function getExtremeArcPoints(firstCircle, nextCircle) {
-	let points = {};
+	var points = {};
 	points.start = firstCircle.arcPoints[dir];
 
-	switch(dir) {
+	switch (dir) {
 		case 'right':
 			points.end = nextCircle.arcPoints.left;
-		break;
+			break;
 		case 'left':
 			points.end = nextCircle.arcPoints.right;
-		break;
+			break;
 		case 'top':
 			points.end = nextCircle.arcPoints.bottom;
-		break;
+			break;
 		case 'bottom':
 			points.end = nextCircle.arcPoints.top;
-		break;
+			break;
 	}
 
 	return points;
 }
 
 function drawForm(wrapper) {
-	let { x, y, circle } = wrapper;
+	var x = wrapper.x;
+	var y = wrapper.y;
+	var circle = wrapper.circle;
+
 	noFill();
 	noStroke();
 	rect(x, y, props.wrapperSize, props.wrapperSize);
@@ -156,15 +155,19 @@ function drawForm(wrapper) {
 }
 
 function addConnections(group) {
-	let connections = [];
-	let { columns, rows } = group;
+	var connections = [];
+	var columns = group.columns;
+	var rows = group.rows;
 
-	group.forms.forEach((form, index) => {
-		let isFirstColumn = form.column === 1;
-		let isFirstRow = form.row === 1;
-		let isLastRow = form.row === rows;
-		let isLastColumn = form.column === columns;
-		let rightSibling, leftSibling, topSibling, bottomSibling;
+	group.forms.forEach(function (form, index) {
+		var isFirstColumn = form.column === 1;
+		var isFirstRow = form.row === 1;
+		var isLastRow = form.row === rows;
+		var isLastColumn = form.column === columns;
+		var rightSibling = undefined,
+		    leftSibling = undefined,
+		    topSibling = undefined,
+		    bottomSibling = undefined;
 
 		if (!isFirstRow) {
 			topSibling = getFormByPosition(group, form.row - 1, form.column);
@@ -188,48 +191,50 @@ function addConnections(group) {
 }
 
 function addConnection(dir, startForm, endForm) {
-	if (!startForm.circle || !endForm.circle) { return; }
-	let startPoint = {};
-	let endPoint = {};
-	switch(dir) {
+	if (!startForm.circle || !endForm.circle) {
+		return;
+	}
+	var startPoint = {};
+	var endPoint = {};
+	switch (dir) {
 		case 'right':
 			startPoint = startForm.circle.arcPoints.right;
 			endPoint = endForm.circle.arcPoints.left;
-		break;
+			break;
 		case 'left':
 			startPoint = startForm.circle.arcPoints.left;
 			endPoint = endForm.circle.arcPoints.right;
-		break;
+			break;
 		case 'top':
 			startPoint = startForm.circle.arcPoints.top;
 			endPoint = endForm.circle.arcPoints.bottom;
-		break;
+			break;
 		case 'bottom':
 			startPoint = startForm.circle.arcPoints.bottom;
 			endPoint = endForm.circle.arcPoints.top;
-		break;
+			break;
 	}
 
 	stroke(endForm.circle.circleColor);
 	strokeWeight(props.lineWeight);
 	line(startPoint.x, startPoint.y, endPoint.x, endPoint.y);
 
-	return { startPoint, endPoint };
+	return { startPoint: startPoint, endPoint: endPoint };
 }
 
 // GETTERS
 function getFormById(id) {
-	let allForms = [];
-	props.groups.forEach((group) => {
+	var allForms = [];
+	props.groups.forEach(function (group) {
 		allForms.concat(group.forms);
 	});
-	return allForms.filter((form) => {
+	return allForms.filter(function (form) {
 		return form.id === id;
 	})[0];
 }
 
 function getFormByPosition(group, row, column) {
-	return group.forms.filter((form) => {
+	return group.forms.filter(function (form) {
 		return form.row === row && form.column == column;
 	})[0];
 }
