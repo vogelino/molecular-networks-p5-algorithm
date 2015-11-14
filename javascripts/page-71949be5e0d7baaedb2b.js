@@ -1,0 +1,1 @@
+webpackJsonp([1,2],{0:function(e,t,u){e.exports=u(12)},12:function(e,t,u){"use strict";function n(e){return e&&e.__esModule?e:{"default":e}}var o=u(13),r=n(o);console.log((0,r["default"])("page2.js loaded"))},13:function(e,t){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t["default"]=function(e){return e+"!"},e.exports=t["default"]}});
