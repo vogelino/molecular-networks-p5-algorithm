@@ -1,19 +1,20 @@
-import './asyncModules'
-import exclaimify from './exclaimify'
+// import './asyncModules'
+const P5 = require('p5');
+const P5dom = require('p5/lib/addons/p5.dom');
+const Immutable = require('immutable');
+import defaults from './algorithm/defaults';
+import setup from './algorithm/setup';
+import draw from './algorithm/draw';
 
-const button = document.getElementById('button')
-
-const alertAsyncMessage = function() {
-  // CommonJS async syntax webpack magic
-  require.ensure([], function() {
-    const message = require("./asyncMessage")
-    alert(exclaimify(message))
-  })
+const algorithm = (p5) => {
+	const props = defaults();
+	const dataModel = Immutable.Map({});
+	p5.setup = () => {
+		setup(p5, props);
+	};
+	p5.draw = () => {
+		draw(p5, props);
+	}
 }
 
-console.log(`
-  asset references like this one:
-    images/gulp.png
-  get updated in js too!`)
-
-button.addEventListener('click', alertAsyncMessage)
+new P5(algorithm);
