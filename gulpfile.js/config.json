@@ -25,13 +25,11 @@
     "css": {
       "src": "stylesheets",
       "dest": "stylesheets",
-      "autoprefixer": {
-        "browsers": ["last 3 version"]
+      "stylus": {
+        "use": ["nib"],
+        "import": ["nib"]
       },
-      "sass": {
-        "indentedSyntax": true
-      },
-      "extensions": ["sass", "scss", "css"]
+      "extensions": ["styl", "css"]
     },
 
     "html": {
