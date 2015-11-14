@@ -2,19 +2,22 @@
 const P5 = require('p5');
 const P5dom = require('p5/lib/addons/p5.dom');
 const Immutable = require('immutable');
-import defaults from './algorithm/defaults';
 import setup from './algorithm/setup';
-import draw from './algorithm/draw';
+import Drawer from './algorithm/drawer';
+import Groups from './algorithm/model/groups';
 
 const algorithm = (p5) => {
-	const props = defaults();
-	const dataModel = Immutable.Map({});
+	window.p5 = p5;
+	let groups = Groups();
+	groups = Immutable.List(groups.getGroups());
 	p5.setup = () => {
-		setup(p5, props);
+		setup(p5);
 	};
 	p5.draw = () => {
-		draw(p5, props);
-	}
+		const drawer = new Drawer(p5);
+		drawer.drawGroups(groups);
+		p5.noLoop();
+	};
 }
 
 new P5(algorithm);
