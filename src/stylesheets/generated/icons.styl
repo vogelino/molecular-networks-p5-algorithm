@@ -1,0 +1,52 @@
+@font-face
+	font-family icons
+	src url("../fonts/icons.eot")
+	src url("../fonts/icons.eot?#iefix") format('embedded-opentype'), url("../fonts/icons.woff") format('woff'), url("../fonts/icons.ttf") format('truetype'), url("../fonts/icons.svg#icons") format('svg')
+	font-weight normal
+	font-style normal
+
+icon($content = '')
+	&:before
+		-moz-osx-font-smoothing grayscale
+		-webkit-font-smoothing antialiased
+		content $content
+		font-family 'icons'
+		font-style normal
+		font-variant normal
+		font-weight normal
+		line-height 1
+		speak none
+		text-transform none
+		{block}
+
+.icon
+	icon()
+
+$icon-facebook = "\EA01"
+
+icon--facebook()
+	+icon($icon-facebook)
+		{block}
+
+.icon.-facebook:before
+	content $icon-facebook
+
+$icon-instagram = "\EA02"
+
+icon--instagram()
+	+icon($icon-instagram)
+		{block}
+
+.icon.-instagram:before
+	content $icon-instagram
+
+$icon-twitter = "\EA03"
+
+icon--twitter()
+	+icon($icon-twitter)
+		{block}
+
+.icon.-twitter:before
+	content $icon-twitter
+
+

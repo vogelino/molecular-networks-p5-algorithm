@@ -58,7 +58,7 @@
     "iconFont": {
       "src": "icons",
       "dest": "fonts",
-      "sassDest": "generated",
+      "stylusDest": "generated",
       "extensions": ["woff2", "woff", "eot", "ttf", "svg"]
     },
 
