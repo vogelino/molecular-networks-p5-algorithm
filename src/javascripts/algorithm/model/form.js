@@ -3,22 +3,26 @@ import defaults from '../defaults';
 import Group from './group';
 
 const Form = (configs) => {
+	const margin = defaults.get('formMargin');
 	const p5 = window.p5;
 	const hasCircle = p5.random(0,2) < 1;
 	const circleSize = p5.random(
 		defaults.get('circleMinSize'),
-		defaults.get('wrapperSize') - 5);
-	const circleX = configs.get('x') + (defaults.get('wrapperSize') / 2);
-	const circleY = configs.get('y') + (defaults.get('wrapperSize') / 2);
+		defaults.get('wrapperSize') - margin);
+	let form = configs
+			.update('x', x => p5.random(x - margin, x + margin))
+			.update('y', y => p5.random(y - margin, y + margin));
+	const circleX = form.get('x') + (defaults.get('wrapperSize') / 2);
+	const circleY = form.get('y') + (defaults.get('wrapperSize') / 2);
 	let circle = Immutable.Map({
 			x: circleX,
 			y: circleY,
 			size: circleSize,
-			circleColor: configs.get('circleColor'),
+			circleColor: form.get('circleColor'),
 			arcPoints: {}
 		});
 
-	let form = configs.set('circle', circle.toJSON());
+	form = form.set('circle', circle);
 
 	if (circle) {
 		const circleCenter = circleSize / 2;
@@ -28,11 +32,10 @@ const Form = (configs) => {
 			left: {x: circleX - circleCenter, y: circleY},
 			right: {x: circleX + circleCenter, y: circleY}
 		});
-		form = configs.set('circle', circle);
+		form = form.set('circle', circle);
 	}
 
 	if (!hasCircle) { form = form.set('circle', false); }
-
 	return form;
 }
 
