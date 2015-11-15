@@ -1,7 +1,7 @@
 const Immutable = require('immutable');
 
 export default Immutable.Map({
-	'groupsAmount': 1,
+	'groupsAmount': 7,
 	'availableFormId': 0,
 	'circleMinSize': 10,
 	'lineWeight': 1,

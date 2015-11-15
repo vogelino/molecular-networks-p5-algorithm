@@ -10,9 +10,14 @@ const Drawer = () => {
 	that.drawForm = (form) => {
 		const circle = form.get('circle');
 		if (circle) {
+			let circleColor = circle.get('circleColor');
 			// drawWrapper(x, y, default.get('wrapperSize'));
 			p5.noFill();
-			p5.stroke(circle.get('circleColor'));
+			p5.stroke(
+				circleColor.hue,
+				circleColor.saturation,
+				circleColor.brightness,
+				circleColor.alpha);
 			p5.strokeWeight(defaults.get('lineWeight'));
 			p5.ellipse(
 				circle.get('x'),

@@ -23,7 +23,7 @@ const Group = () => {
 			for (let column = 1; column <= columns; column++) {
 				const form = Immutable.Map({
 					id: `${id}-${row}-${column}`,
-					circleColor: defaults.get('mainColor'),
+					circleColor: that.getGroupColor(id),
 					x: columnPosX,
 					y: rowPosY,
 					size,
@@ -47,6 +47,15 @@ const Group = () => {
 		group = Connector().connectForms(group);
 
 		return group;
+	};
+
+	that.getGroupColor = (id) => {
+		return {
+			hue: 0,
+			saturation: 0,
+			brightness: 100 - (id * (90 / defaults.get('groupsAmount'))),
+			alpha: 100 * (id / defaults.get('groupsAmount'))
+		};
 	};
 
 	that.construct.apply(arguments);
