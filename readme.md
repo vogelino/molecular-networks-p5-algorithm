@@ -1,7 +1,7 @@
 # p5js algorithm from Lucas Vogel @vogelino
-
+[![Preview of the algorithm](http://demo.vogelino.com/images/molecuclar-algorithm-preview.gif)](https://vogelino.github.io/molecular-networks-p5-algorithm)
 ## Demo
-[vogelino.github.io/molecular-networks-p5-algorithm](vogelino.github.io/molecular-networks-p5-algorithm)
+[vogelino.github.io/molecular-networks-p5-algorithm](https://vogelino.github.io/molecular-networks-p5-algorithm)
 
 ### Installation
 ```
