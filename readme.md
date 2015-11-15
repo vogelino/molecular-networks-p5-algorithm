@@ -11,7 +11,7 @@ npm install
 ```
 
 ### Use
-Run `gulp --env=development` and open `http://localhost:3000`
+Run `gulp` and open `http://localhost:3000`
 
 ### Deploy to gh-pages
 ```
