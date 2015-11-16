@@ -10,9 +10,8 @@ const algorithm = (p5) => {
 	window.p5 = p5;
 	let groups = Groups();
 	groups = Immutable.List(groups.getGroups());
-	p5.setup = () => {
-		setup(p5);
-	};
+	p5.setup = setup().setupCanvas;
+	p5.keyTyped = setup().onKeyTyped;
 	p5.draw = () => {
 		const drawer = new Drawer(p5);
 		drawer.drawGroups(groups);
