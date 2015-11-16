@@ -1,14 +1,12 @@
 const Immutable = require('immutable');
 
 export default Immutable.Map({
-	'groupsAmount': 3,
-	'availableFormId': 0,
+	'groupsAmount': 1,
 	'circleMinSize': 10,
 	'lineWeight': 1,
 	'backgroundColor': 'whitesmoke',
-	'wrapperSize': 50,
-	'colorIndex': 0,
+	'wrapperSize': 30,
 	'mainBrightness': 50,
 	'mainColor': '#000',
-	'formMargin': 10
+	'formMargin': 6
 });
