@@ -5,7 +5,7 @@ import Group from './group';
 const Form = (configs) => {
 	const margin = defaults.get('formMargin');
 	const p5 = window.p5;
-	const hasCircle = p5.random(0,2) < 1;
+	const hasCircle = p5.random(0,100) < defaults.get('circleProbability');
 	const circleSize = p5.random(
 		defaults.get('circleMinSize'),
 		defaults.get('wrapperSize') - margin);
