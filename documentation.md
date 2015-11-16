@@ -26,11 +26,11 @@ Here’s how my first algorithm rules looked like:
 
 And that how the executed results looked like:
 
-<img src="https://cloud.githubusercontent.com/assets/2759340/11172458/38451db2-8c08-11e5-82db-7da10b04136d.jpg" width="19%" style="display: inline-block;" />
-<img src="https://cloud.githubusercontent.com/assets/2759340/11172459/3849209c-8c08-11e5-9c10-c23d6c562707.jpg" width="19%" style="display: inline-block;" />
-<img src="https://cloud.githubusercontent.com/assets/2759340/11172460/384ac5f0-8c08-11e5-8db5-c92f1633907a.jpg" width="19%" style="display: inline-block;" />
-<img src="https://cloud.githubusercontent.com/assets/2759340/11172461/384d31a0-8c08-11e5-93df-ea8e9a9f4176.jpg" width="19%" style="display: inline-block;" />
-<img src="https://cloud.githubusercontent.com/assets/2759340/11172463/385b821e-8c08-11e5-9137-8175c5409e05.jpg" width="19%" style="display: inline-block;" />
+<img src="https://vogelino.github.io/images/documentation/Algorithm-01-result-1.jpg" width="19%" style="display: inline-block;" />
+<img src="https://vogelino.github.io/images/documentation/Algorithm-01-result-2.jpg" width="19%" style="display: inline-block;" />
+<img src="https://vogelino.github.io/images/documentation/Algorithm-01-result-3.jpg" width="19%" style="display: inline-block;" />
+<img src="https://vogelino.github.io/images/documentation/Algorithm-01-result-4.jpg" width="19%" style="display: inline-block;" />
+<img src="https://vogelino.github.io/images/documentation/Algorithm-01-result-5.jpg" width="19%" style="display: inline-block;" />
 
 In my case, the results were surprisingly similar to what I expected. Anyway, I still discovered some _aspects_ that differed from my first idea:
 - All execution have been made with a pencil instead of using a black pencil as described.
@@ -74,13 +74,13 @@ At the end
 
 At the office @ubermetrics I asked 10 people to execute this algorithm and look how what results emerged from that:
 
-<img src="https://cloud.githubusercontent.com/assets/2759340/11172462/3859b682-8c08-11e5-849f-38c9d253bc23.jpg" width=19%" style="display: inline-block" />
-<img src="https://cloud.githubusercontent.com/assets/2759340/11172464/385e1dda-8c08-11e5-8388-50bfdc112763.jpg" width=19%" style="display: inline-block" />
-<img src="https://cloud.githubusercontent.com/assets/2759340/11172466/386565ea-8c08-11e5-949e-3fe9230932e3.jpg" width=19%" style="display: inline-block" />
-<img src="https://cloud.githubusercontent.com/assets/2759340/11172465/386510f4-8c08-11e5-854a-6f048071a187.jpg" width=19%" style="display: inline-block" />
-<img src="https://cloud.githubusercontent.com/assets/2759340/11172467/386dde5a-8c08-11e5-8abf-89331c124985.jpg" width=19%" style="display: inline-block" />
-<img src="https://cloud.githubusercontent.com/assets/2759340/11172469/38749362-8c08-11e5-8082-a470458637d7.jpg" width=19%" style="display: inline-block" />
-<img src="https://cloud.githubusercontent.com/assets/2759340/11172468/38730268-8c08-11e5-90cb-46a7971cb02d.jpg" width=19%" style="display: inline-block" />
-<img src="https://cloud.githubusercontent.com/assets/2759340/11172470/387d3c42-8c08-11e5-9252-0180d8b598b7.jpg" width=19%" style="display: inline-block" />
-<img src="https://cloud.githubusercontent.com/assets/2759340/11172471/387d8c7e-8c08-11e5-9e4b-ce1682d327f3.jpg" width=19%" style="display: inline-block" />
-<img src="https://cloud.githubusercontent.com/assets/2759340/11172472/388585b4-8c08-11e5-96b2-4e09f59a207c.jpg" width=19%" style="display: inline-block" />
+<img src="https://vogelino.github.io/images/documentation/Algorithm-02-result-1.jpg" width=19%" style="display: inline-block" />
+<img src="https://vogelino.github.io/images/documentation/Algorithm-02-result-2.jpg" width=19%" style="display: inline-block" />
+<img src="https://vogelino.github.io/images/documentation/Algorithm-02-result-3.jpg" width=19%" style="display: inline-block" />
+<img src="https://vogelino.github.io/images/documentation/Algorithm-02-result-4.jpg" width=19%" style="display: inline-block" />
+<img src="https://vogelino.github.io/images/documentation/Algorithm-02-result-5.jpg" width=19%" style="display: inline-block" />
+<img src="https://vogelino.github.io/images/documentation/Algorithm-02-result-6.jpg" width=19%" style="display: inline-block" />
+<img src="https://vogelino.github.io/images/documentation/Algorithm-02-result-7.jpg" width=19%" style="display: inline-block" />
+<img src="https://vogelino.github.io/images/documentation/Algorithm-02-result-8.jpg" width=19%" style="display: inline-block" />
+<img src="https://vogelino.github.io/images/documentation/Algorithm-02-result-9.jpg" width=19%" style="display: inline-block" />
+<img src="https://vogelino.github.io/images/documentation/Algorithm-02-result-10.jpg" width=19%" style="display: inline-block" />
