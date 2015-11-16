@@ -26,11 +26,11 @@ Here’s how my first algorithm rules looked like:
 
 And that how the executed results looked like:
 
-<img src="https://vogelino.github.io/images/documentation/Algorithm-01-result-1.jpg" width="19%" style="display: inline-block;" />
-<img src="https://vogelino.github.io/images/documentation/Algorithm-01-result-2.jpg" width="19%" style="display: inline-block;" />
-<img src="https://vogelino.github.io/images/documentation/Algorithm-01-result-3.jpg" width="19%" style="display: inline-block;" />
-<img src="https://vogelino.github.io/images/documentation/Algorithm-01-result-4.jpg" width="19%" style="display: inline-block;" />
-<img src="https://vogelino.github.io/images/documentation/Algorithm-01-result-5.jpg" width="19%" style="display: inline-block;" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/Algorithm-01-result-1.jpg" width="19%" style="display: inline-block;" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/Algorithm-01-result-2.jpg" width="19%" style="display: inline-block;" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/Algorithm-01-result-3.jpg" width="19%" style="display: inline-block;" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/Algorithm-01-result-4.jpg" width="19%" style="display: inline-block;" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/Algorithm-01-result-5.jpg" width="19%" style="display: inline-block;" />
 
 In my case, the results were surprisingly similar to what I expected. Anyway, I still discovered some _aspects_ that differed from my first idea:
 - All execution have been made with a pencil instead of using a black pencil as described.
@@ -67,20 +67,19 @@ Inside the rectangle
 - Circles that overlap the sides of the rectangle will be closed with straight lines
 
 At the end
-
 - With an eraser
 - Erase the outline of the rectangle
 ```
 
 At the office @ubermetrics I asked 10 people to execute this algorithm and look how what results emerged from that:
 
-<img src="https://vogelino.github.io/images/documentation/Algorithm-02-result-1.jpg" width=19%" style="display: inline-block" />
-<img src="https://vogelino.github.io/images/documentation/Algorithm-02-result-2.jpg" width=19%" style="display: inline-block" />
-<img src="https://vogelino.github.io/images/documentation/Algorithm-02-result-3.jpg" width=19%" style="display: inline-block" />
-<img src="https://vogelino.github.io/images/documentation/Algorithm-02-result-4.jpg" width=19%" style="display: inline-block" />
-<img src="https://vogelino.github.io/images/documentation/Algorithm-02-result-5.jpg" width=19%" style="display: inline-block" />
-<img src="https://vogelino.github.io/images/documentation/Algorithm-02-result-6.jpg" width=19%" style="display: inline-block" />
-<img src="https://vogelino.github.io/images/documentation/Algorithm-02-result-7.jpg" width=19%" style="display: inline-block" />
-<img src="https://vogelino.github.io/images/documentation/Algorithm-02-result-8.jpg" width=19%" style="display: inline-block" />
-<img src="https://vogelino.github.io/images/documentation/Algorithm-02-result-9.jpg" width=19%" style="display: inline-block" />
-<img src="https://vogelino.github.io/images/documentation/Algorithm-02-result-10.jpg" width=19%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/Algorithm-02-result-1.jpg" width="19%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/Algorithm-02-result-2.jpg" width="19%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/Algorithm-02-result-3.jpg" width="19%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/Algorithm-02-result-4.jpg" width="19%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/Algorithm-02-result-5.jpg" width="19%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/Algorithm-02-result-6.jpg" width="19%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/Algorithm-02-result-7.jpg" width="19%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/Algorithm-02-result-8.jpg" width="19%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/Algorithm-02-result-9.jpg" width="19%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/Algorithm-02-result-10.jpg" width="19%" style="display: inline-block" />
