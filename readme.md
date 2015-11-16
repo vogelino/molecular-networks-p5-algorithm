@@ -184,8 +184,8 @@ The rows/columns system was a good solution for avoiding overlapping but the gri
 
 Disorder was needed. In order to achieve this disorder, each element of the grid has been displaced with a noise in x and y. The pattern became interesting and still, the overlapping did not occur.
 
-<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/v005.1.png" width="24%" style="display: inline-block" />
-<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/v005.2.png" width="24%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/v005.1.png" width="49%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/v005.2.png" width="50%" style="display: inline-block" />
 <img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/v005.3.png" width="100%" style="display: inline-block" />
 
 ## What purpose for?
