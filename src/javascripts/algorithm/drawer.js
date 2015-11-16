@@ -1,4 +1,3 @@
-const Immutable = require('immutable');
 import defaults from './defaults';
 
 const Drawer = () => {

@@ -3,7 +3,6 @@ import defaults from '../defaults';
 import Group from './group';
 
 const Groups = () => {
-	let p5 = window.p5;
 	let that = {};
 
 	that.construct = () => {};
