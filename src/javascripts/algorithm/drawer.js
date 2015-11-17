@@ -35,9 +35,13 @@ const Drawer = () => {
 
 	that.drawConnection = (connection) => {
 		p5.strokeWeight(defaults.get('lineWeight'));
-		p5.line(
+		p5.bezier(
 			connection.get('startPoint').x,
 			connection.get('startPoint').y,
+			connection.get('startPoint').bezierX,
+			connection.get('startPoint').bezierY,
+			connection.get('endPoint').bezierX,
+			connection.get('endPoint').bezierY,
 			connection.get('endPoint').x,
 			connection.get('endPoint').y);
 	};

@@ -27,10 +27,30 @@ const Form = (configs) => {
 	if (circle) {
 		const circleCenter = circleSize / 2;
 		circle = circle.set('arcPoints', {
-			top: {x: circleX, y: circleY - circleCenter},
-			bottom: {x: circleX, y: circleY + circleCenter},
-			left: {x: circleX - circleCenter, y: circleY},
-			right: {x: circleX + circleCenter, y: circleY}
+			top: {
+				x: circleX,
+				y: circleY - circleCenter,
+				bezierX: circleX,
+				bezierY: configs.get('y')
+			},
+			bottom: {
+				x: circleX,
+				y: circleY + circleCenter,
+				bezierX: circleX,
+				bezierY: configs.get('y') + form.get('size')
+			},
+			left: {
+				x: circleX - circleCenter,
+				y: circleY,
+				bezierX: configs.get('x'),
+				bezierY: circleY
+			},
+			right: {
+				x: circleX + circleCenter,
+				y: circleY,
+				bezierX: configs.get('x') + form.get('size'),
+				bezierY: circleY
+			}
 		});
 		form = form.set('circle', circle);
 	}
