@@ -21,7 +21,7 @@ gulp deploy
 ---
 
 ## The algorithm
-The molecular networks algorithms is the result of many experimentations and exercises done at the course [“Input Output - Introduction to process-oriented design”]( https://fhp.incom.org/workspace/6176) supervised by [Fabian Morón Zirfas]( http://fabianmoronzirfas.me/).
+The molecular networks algorithms is the result of many experimentations and exercises done at the course [“Input Output - Introduction to process-oriented design”]( https://fhp.incom.org/workspace/6176) supervised by [Fabian Morón Zirfas](https://github.com/fabiantheblind).
 
 
 The first exercise of the course has been to write an algorithm in 3 minutes in a human-readable language (common language). These lines of _commands_ had to tell the executant how to draw something on a piece of paper. Every student wrote a bunch of rules on a sheet of paper and gave it to the next student so he/she could execute it.
