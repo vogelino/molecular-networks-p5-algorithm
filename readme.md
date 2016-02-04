@@ -177,8 +177,8 @@ The step by step process of coding was meant to find the best way to connect cir
 <img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/digitalAlgorithm/3.2.png" width="32%" style="display: inline-block" />
 <img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/digitalAlgorithm/3.3.png" width="32%" style="display: inline-block" />
 <img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/digitalAlgorithm/3.4.png" width="32%" style="display: inline-block" />
-<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/v004.1.png" width="32%" style="display: inline-block" />
-<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/v004.2.png" width="32%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/digitalAlgorithm/4.1.png" width="32%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/digitalAlgorithm/4.2.png" width="32%" style="display: inline-block" />
 
 The rows/columns system was a good solution for avoiding overlapping but the grid became really present, too present. Life forms are sometimes represented in a geometrical way but rarely look so in reality. The result had to look more natural and organic.
 
