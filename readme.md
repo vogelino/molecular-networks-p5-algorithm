@@ -115,16 +115,16 @@ It's over, thank you for your time!
 
 And here the results:
 
-<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/analogAlgorithm/homeworkVersion2/1.jpg" width="19%" style="display: inline-block" />
-<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/analogAlgorithm/homeworkVersion2/2.jpg" width="19%" style="display: inline-block" />
-<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/analogAlgorithm/homeworkVersion2/3.jpg" width="19%" style="display: inline-block" />
-<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/analogAlgorithm/homeworkVersion2/4.jpg" width="19%" style="display: inline-block" />
-<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/analogAlgorithm/homeworkVersion2/5.jpg" width="19%" style="display: inline-block" />
-<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/analogAlgorithm/homeworkVersion2/6.jpg" width="19%" style="display: inline-block" />
-<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/analogAlgorithm/homeworkVersion2/7.jpg" width="19%" style="display: inline-block" />
-<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/analogAlgorithm/homeworkVersion2/8.jpg" width="19%" style="display: inline-block" />
-<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/analogAlgorithm/homeworkVersion2/9.jpg" width="19%" style="display: inline-block" />
-<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/analogAlgorithm/homeworkVersion2/10.jpg" width="19%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/analogAlgorithms/homeworkVersion2/1.jpg" width="19%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/analogAlgorithms/homeworkVersion2/2.jpg" width="19%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/analogAlgorithms/homeworkVersion2/3.jpg" width="19%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/analogAlgorithms/homeworkVersion2/4.jpg" width="19%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/analogAlgorithms/homeworkVersion2/5.jpg" width="19%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/analogAlgorithms/homeworkVersion2/6.jpg" width="19%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/analogAlgorithms/homeworkVersion2/7.jpg" width="19%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/analogAlgorithms/homeworkVersion2/8.jpg" width="19%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/analogAlgorithms/homeworkVersion2/9.jpg" width="19%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/analogAlgorithms/homeworkVersion2/10.jpg" width="19%" style="display: inline-block" />
 
 Every sheet of paper became different and there still was a unity between every drawings. The use of color and the fact that all of them got forms maintained in a wrapper form led to this unity. There is one story and one explanation for every execution. Multiple layers come to the game, the visual and personal aspect.
 
