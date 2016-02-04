@@ -40,11 +40,11 @@ Here’s how the first algorithm rules looked like:
 
 And the executed results:
 
-<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/Algorithm-01-result-1.jpg" width="19%" style="display: inline-block;" />
-<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/Algorithm-01-result-2.jpg" width="19%" style="display: inline-block;" />
-<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/Algorithm-01-result-3.jpg" width="19%" style="display: inline-block;" />
-<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/Algorithm-01-result-4.jpg" width="19%" style="display: inline-block;" />
-<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/Algorithm-01-result-5.jpg" width="19%" style="display: inline-block;" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/analogAlgorithms/classAlgorithm/1.jpg" width="19%" style="display: inline-block;" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/analogAlgorithms/classAlgorithm/2.jpg" width="19%" style="display: inline-block;" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/analogAlgorithms/classAlgorithm/3.jpg" width="19%" style="display: inline-block;" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/analogAlgorithms/classAlgorithm/4.jpg" width="19%" style="display: inline-block;" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/analogAlgorithms/classAlgorithm/5.jpg" width="19%" style="display: inline-block;" />
 
 Some parts of the algorithm's steps may not have been described precisely enough or have been disregarded, but the output is mostly loyal to my original expectations. Time has not been seriously taken in consideration and it led to unfinished results. Also, the interpretation of some rules has been different from executant to executant. For example, the last result did interpret the rule `not filled` as white circles on a dark background. These differences have been analyzed and considered for the next version of the algorithm as room for improvement.
 
@@ -80,16 +80,16 @@ At the end
 
 10 people executed the algorithm. Here are the results:
 
-<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/Algorithm-03-result-1.jpg" width="19%" style="display: inline-block" />
-<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/Algorithm-03-result-2.jpg" width="19%" style="display: inline-block" />
-<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/Algorithm-03-result-3.jpg" width="19%" style="display: inline-block" />
-<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/Algorithm-03-result-4.jpg" width="19%" style="display: inline-block" />
-<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/Algorithm-03-result-5.jpg" width="19%" style="display: inline-block" />
-<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/Algorithm-03-result-6.jpg" width="19%" style="display: inline-block" />
-<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/Algorithm-03-result-7.jpg" width="19%" style="display: inline-block" />
-<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/Algorithm-03-result-8.jpg" width="19%" style="display: inline-block" />
-<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/Algorithm-03-result-9.jpg" width="19%" style="display: inline-block" />
-<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/Algorithm-03-result-10.jpg" width="19%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/analogAlgorithms/homeworkVersion1/1.jpg" width="19%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/analogAlgorithms/homeworkVersion1/2.jpg" width="19%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/analogAlgorithms/homeworkVersion1/3.jpg" width="19%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/analogAlgorithms/homeworkVersion1/4.jpg" width="19%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/analogAlgorithms/homeworkVersion1/5.jpg" width="19%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/analogAlgorithms/homeworkVersion1/6.jpg" width="19%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/analogAlgorithms/homeworkVersion1/7.jpg" width="19%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/analogAlgorithms/homeworkVersion1/8.jpg" width="19%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/analogAlgorithms/homeworkVersion1/9.jpg" width="19%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/analogAlgorithms/homeworkVersion1/10.jpg" width="19%" style="display: inline-block" />
 
 Even if small unexpected differences by the execution happened, all are quite accurate. Despite the variations, Results became more visually consistent. The use of dedicated material created unity and a more unique look. Nevertheless, the lack of freedoms leaved to the executants led to a less original and dynamic final picture.
 
@@ -115,16 +115,16 @@ It's over, thank you for your time!
 
 And here the results:
 
-<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/Algorithm-02-result-1.jpg" width="19%" style="display: inline-block" />
-<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/Algorithm-02-result-2.jpg" width="19%" style="display: inline-block" />
-<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/Algorithm-02-result-3.jpg" width="19%" style="display: inline-block" />
-<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/Algorithm-02-result-4.jpg" width="19%" style="display: inline-block" />
-<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/Algorithm-02-result-5.jpg" width="19%" style="display: inline-block" />
-<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/Algorithm-02-result-6.jpg" width="19%" style="display: inline-block" />
-<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/Algorithm-02-result-7.jpg" width="19%" style="display: inline-block" />
-<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/Algorithm-02-result-8.jpg" width="19%" style="display: inline-block" />
-<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/Algorithm-02-result-9.jpg" width="19%" style="display: inline-block" />
-<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/Algorithm-02-result-10.jpg" width="19%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/analogAlgorithm/homeworkVersion2/1.jpg" width="19%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/analogAlgorithm/homeworkVersion2/2.jpg" width="19%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/analogAlgorithm/homeworkVersion2/3.jpg" width="19%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/analogAlgorithm/homeworkVersion2/4.jpg" width="19%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/analogAlgorithm/homeworkVersion2/5.jpg" width="19%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/analogAlgorithm/homeworkVersion2/6.jpg" width="19%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/analogAlgorithm/homeworkVersion2/7.jpg" width="19%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/analogAlgorithm/homeworkVersion2/8.jpg" width="19%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/analogAlgorithm/homeworkVersion2/9.jpg" width="19%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/analogAlgorithm/homeworkVersion2/10.jpg" width="19%" style="display: inline-block" />
 
 Every sheet of paper became different and there still was a unity between every drawings. The use of color and the fact that all of them got forms maintained in a wrapper form led to this unity. There is one story and one explanation for every execution. Multiple layers come to the game, the visual and personal aspect.
 
@@ -137,25 +137,25 @@ The next step after the analogous algorithm was to translate it in code. Accordi
 
 **Exercice 1**: Draw a man with primitive form in 10 minutes:
 
-<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/draw-a-person.png" width="32%" style="display: inline-block; margin: 0 10px 5px 0;" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/exercises/drawAPerson.png" width="32%" style="display: inline-block; margin: 0 10px 5px 0;" />
 Using basic shapes, I draw jesus with a moving halo!
 
 **Exercice 2**: Draw an interesting color composition with HSB in 10 minutes:
 
-<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/use-color-mode.png" width="32%" style="display: inline-block; margin: 0 10px 5px 0;" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/exercises/useColorMode.png" width="32%" style="display: inline-block; margin: 0 10px 5px 0;" />
 Using the hue of an inout color, I created a color triad.
 
 **Exercice 3**: Using javascript loops, create an interesting pattern in 10 minutes:
 
-<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/for-loop.png" width="32%" style="display: inline-block; margin: 0 10px 5px 0;" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/exercises/forLoop.png" width="32%" style="display: inline-block; margin: 0 10px 5px 0;" />
 Using an exponential increase of repeated ellipses, I drew this pattern.
 
 
 ## Translating the algorithm in p5js:
-<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/research-001.png" width="24%" style="display: inline-block" />
-<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/research-002.png" width="24%" style="display: inline-block" />
-<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/research-003.png" width="24%" style="display: inline-block" />
-<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/research-004.png" width="24%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/triesAndEperiments/1.png" width="24%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/triesAndEperiments/2.png" width="24%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/triesAndEperiments/3.png" width="24%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/triesAndEperiments/4.png" width="24%" style="display: inline-block" />
 
 The coded output was quite dissimilar from the results made by the executants. It loosed its base intention that was to include personal data as base for algorithmic rules. The interesting part that seemed to be appreciated is the use of the family as a variable. Our guest [Mey Lean Kronemann](http://meyleankronemann.de/) made the suggestion of investigating the topic of artificial life forms. The idea of forms representing families can be associated to flocking behaviors in biology and the aspect of the agglomerated circles to cells and/or bacterias. These hints were used as base for the next iteration of my algorithm.
 
@@ -164,19 +164,19 @@ The coded version of the algorithm was inspired by natural micro living forms, m
 
 See screenshots of the coding process:
 
-<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/v001.1.png" width="32%" style="display: inline-block" />
-<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/v001.2.png" width="32%" style="display: inline-block" />
-<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/v002.1.png" width="32%" style="display: inline-block" />
-<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/v002.2.png" width="32%" style="display: inline-block" />
-<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/v002.3.png" width="32%" style="display: inline-block" />
-<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/v002.4.png" width="32%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/digitalAlgorithm/1.1.png" width="32%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/digitalAlgorithm/1.2.png" width="32%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/digitalAlgorithm/2.1.png" width="32%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/digitalAlgorithm/2.2.png" width="32%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/digitalAlgorithm/2.3.png" width="32%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/digitalAlgorithm/2.4.png" width="32%" style="display: inline-block" />
 
 The step by step process of coding was meant to find the best way to connect circles together in a nice optic. Overlapping occurred and had to be avoided and variation was needed. Therefore, circles were displayed in a rows/columns system that took care of avoiding overlapping.
 
-<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/v003.1.png" width="32%" style="display: inline-block" />
-<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/v003.2.png" width="32%" style="display: inline-block" />
-<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/v003.3.png" width="32%" style="display: inline-block" />
-<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/v003.4.png" width="32%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/digitalAlgorithm/3.1.png" width="32%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/digitalAlgorithm/3.2.png" width="32%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/digitalAlgorithm/3.3.png" width="32%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/digitalAlgorithm/3.4.png" width="32%" style="display: inline-block" />
 <img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/v004.1.png" width="32%" style="display: inline-block" />
 <img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/v004.2.png" width="32%" style="display: inline-block" />
 
@@ -184,12 +184,12 @@ The rows/columns system was a good solution for avoiding overlapping but the gri
 
 Disorder was needed. In order to achieve this disorder, each element of the grid has been displaced with a noise in x and y. The pattern became interesting and still, the overlapping did not occur.
 
-<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/v005.1.png" width="49%" style="display: inline-block" />
-<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/v005.2.png" width="50%" style="display: inline-block" />
-<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/v005.3.png" width="100%" style="display: inline-block" />
-<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/v005.4.png" width="100%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/digitalAlgorithm/5.1.png" width="49%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/digitalAlgorithm/5.2.png" width="50%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/digitalAlgorithm/5.3.png" width="100%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/digitalAlgorithm/5.4.png" width="100%" style="display: inline-block" />
 
 ## What purpose for?
 The idea that unique steel barriers could be produced is an interesting application. The algorithm could be used to generate a unique pattern for each piece of barrier. That is how it could look like:
 
-<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/simulation.jpg" width="100%" style="display: inline-block" />
+<img src="https://raw.githubusercontent.com/vogelino/molecular-networks-p5-algorithm/master/documentation/images/simulation/simulation.jpg" width="100%" style="display: inline-block" />
