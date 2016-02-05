@@ -1,8 +1,10 @@
+[![Javascript documentation](http://demo.vogelino.com/molecular-networks-p5-algorithm-docs/badge.svg)](http://demo.vogelino.com/molecular-networks-p5-algorithm-docs/)
+
+##### [Demo](https://vogelino.github.io/molecular-networks-p5-algorithm/) — [Docs](http://demo.vogelino.com/molecular-networks-p5-algorithm-docs/)
+
 # Molecular networks: Uniques generated patterns
 
 Setting up automated processes that follow precise rules can improve productivity and lead to surprising results. An infinite amount of possible designs can be generated from smartly meshed algorithms. Variations that would take hours to create using graphic design tools can that way be delivered in seconds. Process-oriented design is a really powerful asset to designer and has to be taken as advantage.
-
-#### [Demo](https://vogelino.github.io/molecular-networks-p5-algorithm/)
 #### Installation
 ```
 git clone https://github.com/vogelino/molecular-networks-p5-algorithm.git
