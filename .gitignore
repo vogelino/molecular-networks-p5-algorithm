@@ -2,3 +2,4 @@
 dest
 node_modules
 npm-debug.log
+documentation/esdoc/**
