@@ -13,12 +13,7 @@ npm install
 ```
 
 #### Use
-Run `gulp` and open `http://localhost:3000`
-
-#### Deploy to gh-pages
-```
-gulp deploy
-```
+Run `npm run watch` and open `http://localhost:8080`
 
 ---
 
