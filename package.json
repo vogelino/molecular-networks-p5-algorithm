@@ -8,8 +8,13 @@
     "url": "git://github.com/vogelino/molecular-networks-p5-algorithm.git"
   },
   "scripts": {
-    "watch": "webpack && webpack-dev-server --watch --inline --content-base dest",
+    "watch": "webpack-dev-server --env.dev --watch --inline --content-base dest",
+    "build": "webpack --env.prod -p",
     "documentJs": "esdoc -c esdoc.json"
+  },
+  "engines": {
+    "node": "v0.12.9",
+    "npm": "v2.14.9"
   },
   "dependencies": {
     "babel-polyfill": "^6.3.14",

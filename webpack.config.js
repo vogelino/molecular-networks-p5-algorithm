@@ -5,19 +5,15 @@ var CopyWebpackPlugin = require('copy-webpack-plugin');
 var CleanWebpackPlugin = require('clean-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
-var rootDir = __dirname;
-var src = './src';
-var dest = './dest';
+var isDevEnv = process.env.NODE_ENV === 'development';
 
 module.exports = {
-	context: rootDir,
-	entry: [
-		'babel-polyfill',
-		src + '/js/index.js'
-	],
+	context: path.resolve(__dirname, 'src'),
+	entry: './js/index.js',
 	output: {
 		filename: 'bundle.js',
-		path: dest
+		path: path.resolve(__dirname, 'dest'),
+		pathinfo: isDevEnv
 	},
 	module: {
 		loaders: [
@@ -30,16 +26,8 @@ module.exports = {
 				}
 			},
 			{
-				test: /\.css$/,
-				loader: 'style-loader!css-loader'
-			},
-			{
 				test: /\.styl$/,
 				loader: 'style-loader!css-loader!stylus-loader'
-			},
-			{
-				test: /\.(jpg|png|gif|svg)$/,
-				loader: 'file-loader'
 			},
 			{
 				test: /\.js$/, loader: 'eslint-loader', exclude: /node_modules/
@@ -50,23 +38,24 @@ module.exports = {
 		use: [ nib() ]
 	},
 	resolve: {
-		extensions: [ '', '.js', '.css', '.styl', '.jpg', '.png', '.gif' ]
+		extensions: [ '', '.js', '.styl' ]
 	},
 	plugins: [
 		new webpack.NoErrorsPlugin(),
-		new CleanWebpackPlugin([ dest ], {
-			root: rootDir,
+		new CleanWebpackPlugin([ path.resolve(__dirname, 'dest') ], {
+			root: __dirname,
 			verbose: true,
 			dry: false
 		}),
 		new HtmlWebpackPlugin({
 			title: 'A generated molecular Network done with p5js | Demo | @vogelino',
-			template: src + '/index.html',
+			template: './src/index.ejs',
 			inject: 'body'
 		})
 	],
 	stats: {
 		colors: true
 	},
-	devtool: 'source-map'
+	devtool: !isDevEnv ? 'source-map' : 'eval',
+	bail: !isDevEnv
 };

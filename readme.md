@@ -15,6 +15,8 @@ npm install
 #### Use
 Run `npm run watch` and open `http://localhost:8080`
 
+**Note:** This will only work with node v0.12.9
+
 ---
 
 ## The algorithm
