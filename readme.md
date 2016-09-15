@@ -15,7 +15,7 @@ npm install
 #### Use
 Run `npm run watch` and open `http://localhost:8080`
 
-**Note:** This will only work with node v6.2.0 and npm 3.8.9. I recommend to use nvm to switch between node versions. If you use it, run {{nvm use}} in the repo root.
+**Note:** This will only work with node v6.2.0 and npm 3.8.9. I recommend to use nvm to switch between node versions. If you use it, run `nvm use` in the repo root.
 
 ---
 
