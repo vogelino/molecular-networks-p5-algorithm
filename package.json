@@ -2,10 +2,10 @@
   "name": "molecular-networks-p5-algorithm",
   "version": "1.0.1",
   "description": "A p5js algorithm drawin molecular-like forms in a canvas",
-  "homepage": "http://vogelino.github.io/molecular-networks-p5-algorithm/",
+  "homepage": "https://molecular-networks.vogelino.com",
   "repository": {
     "type": "git",
-    "url": "git://github.com/vogelino/molecular-networks-p5-algorithm.git"
+    "url": "git@github.com:vogelino/molecular-networks-p5-algorithm.git"
   },
   "scripts": {
     "start": "npm run watch",
