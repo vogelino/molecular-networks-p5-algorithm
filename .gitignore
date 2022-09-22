@@ -1,0 +1,7 @@
+.DS_Store
+public
+node_modules
+npm-debug.log
+documentation/esdoc/**
+.cache
+dist

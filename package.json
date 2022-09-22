@@ -1,0 +1,26 @@
+{
+  "name": "molecular-networks-p5-algorithm",
+  "version": "1.0.1",
+  "description": "A p5js algorithm drawin molecular-like forms in a canvas",
+  "homepage": "https://molecular-networks.vogelino.com",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:vogelino/molecular-networks-p5-algorithm.git"
+  },
+  "scripts": {
+    "start": "npx serve dist",
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "engines": {
+    "node": "16.16.0"
+  },
+  "dependencies": {
+    "immutable": "3.7.5",
+    "p5": "0.5.3"
+  },
+  "devDependencies": {
+    "parcel-bundler": "1.12.5"
+  },
+  "license": "MIT"
+}
