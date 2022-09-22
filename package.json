@@ -8,39 +8,19 @@
     "url": "git@github.com:vogelino/molecular-networks-p5-algorithm.git"
   },
   "scripts": {
-    "start": "npm run watch",
-    "watch": "webpack-dev-server --env.dev --content-base public",
-    "build": "webpack --env.prod -p",
-    "documentJs": "esdoc -c esdoc.json"
+    "start": "npx serve dist",
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
   },
   "engines": {
-    "node": "12.14.1"
+    "node": "16.16.0"
   },
   "dependencies": {
-    "babel-polyfill": "6.3.14",
-    "babel-runtime": "6.3.19",
     "immutable": "3.7.5",
-    "nib": "^1.1.2",
     "p5": "0.5.3"
   },
   "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-eslint": "6.1.2",
-    "babel-loader": "6.2.0",
-    "babel-plugin-transform-runtime": "6.3.13",
-    "babel-preset-es2015": "6.3.13",
-    "clean-webpack-plugin": "0.1.10",
-    "copy-webpack-plugin": "3.0.1",
-    "css-loader": "0.25.0",
-    "eslint": "3.5.0",
-    "eslint-loader": "1.2.1",
-    "file-loader": "0.9.0",
-    "gulp-esdoc": "0.3.0",
-    "html-webpack-plugin": "2.22.0",
-    "style-loader": "0.13.0",
-    "stylus-loader": "2.3.1",
-    "webpack": "2.1.0-beta.21",
-    "webpack-dev-server": "1.15.1"
+    "parcel-bundler": "1.12.5"
   },
-  "license": "WTFPL"
+  "license": "MIT"
 }
