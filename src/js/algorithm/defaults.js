@@ -6,12 +6,12 @@ const Immutable = require('immutable');
  */
 export default Immutable.Map({
 	groupsAmount: 1,
-	circleMinSize: 10,
+	circleMinSize: 2,
 	lineWeight: 1,
-	backgroundColor: '#f5f5f5',
+	backgroundColor: '#282828',
 	wrapperSize: 30,
-	mainBrightness: 50,
-	mainColor: '#000',
-	formMargin: 6,
-	circleProbability: 60
+	mainHue: Math.random() * 360,
+	formMargin: 2,
+  circleProbability: 0.5,
+  fragmentation: 20
 });

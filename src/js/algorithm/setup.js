@@ -14,13 +14,13 @@ const Setup = (p5) => {
     // canvas.position(0, 0);
     canvas.class("p5-canvas");
     canvas.parent("molectular-algorithm");
-    p5.colorMode(p5.HSB, 360, 100, 100, 100);
+    p5.colorMode(p5.HSB);
 
     p5.background(defaults.get("backgroundColor"));
   };
 
   that.onKeyTyped = (key) => {
-    if (key.keyCode === 115) {
+    if (key === "s") {
       p5.saveCanvas(canvas, "molecular-networks-export", "png");
     }
   };

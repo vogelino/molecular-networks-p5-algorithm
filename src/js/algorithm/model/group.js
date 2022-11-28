@@ -30,7 +30,10 @@ const Group = (p5) => {
       for (let column = 1; column <= columns; column++) {
         const form = Immutable.Map({
           id: `${id}-${row}-${column}`,
-          circleColor: that.getGroupColor(id),
+          circleColor: that.getGroupColor(
+            columnPosX,
+            rowPosY
+          ),
           x: columnPosX,
           y: rowPosY,
           size,
@@ -60,12 +63,16 @@ const Group = (p5) => {
    * @param  {Number} id - The unique identifier for a group
    * @return {Object}    - An Object with hue, saturation, brightness and alpha
    */
-  that.getGroupColor = (id) => {
+  that.getGroupColor = (x, y) => {
+    const nz = p5.noise(
+      p5.map(x, 0, p5.width, 0, defaults.get("fragmentation")),
+      p5.map(y, 0, p5.height, 0, defaults.get("fragmentation")),
+    )
     return {
-      hue: 0,
-      saturation: 0,
-      brightness: 100 - id * (90 / defaults.get("groupsAmount")),
-      alpha: 100 * (id / defaults.get("groupsAmount")),
+      hue: defaults.get("mainHue") + p5.map(nz, 0, 1, 0, 360),
+      saturation: 50,
+      brightness: p5.map(nz, 0, 1, 0, 200),
+      alpha: 100,
     };
   };
 

@@ -1,7 +1,6 @@
 /* global window */
 const Immutable = require("immutable");
 import defaults from "../defaults";
-import Group from "./group";
 
 /**
  * @class A form (data)
@@ -10,16 +9,24 @@ import Group from "./group";
  */
 const Form = (configs, p5) => {
   const margin = defaults.get("formMargin");
-  const hasCircle = p5.random(0, 100) < defaults.get("circleProbability");
-  const circleSize = p5.random(
-    defaults.get("circleMinSize"),
-    defaults.get("wrapperSize") - margin
-  );
   let form = configs
     .update("x", (x) => p5.random(x - margin, x + margin))
     .update("y", (y) => p5.random(y - margin, y + margin));
-  const circleX = form.get("x") + defaults.get("wrapperSize") / 2;
-  const circleY = form.get("y") + defaults.get("wrapperSize") / 2;
+  const fragmentation = defaults.get("fragmentation")
+  const nz = p5.noise(
+    p5.map(form.get("x"), 0, p5.width, 0, fragmentation),
+    p5.map(form.get("y"), 0, p5.height, 0, fragmentation),
+  )
+  const circleSize = p5.map(
+    nz,
+    0,
+    1,
+    defaults.get("circleMinSize"),
+    defaults.get("wrapperSize")
+  );
+  const hasCircle = nz < defaults.get("circleProbability");
+  const circleX = form.get("x") + defaults.get("wrapperSize") / 2 + p5.random(-3, 3);
+  const circleY = form.get("y") + defaults.get("wrapperSize") / 2 + p5.random(-3, 3);
   let circle = Immutable.Map({
     x: circleX,
     y: circleY,

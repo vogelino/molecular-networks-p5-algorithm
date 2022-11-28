@@ -15,8 +15,9 @@ export const Drawer = (p5) => {
     if (circle) {
       let circleColor = circle.get("circleColor");
       // drawWrapper(x, y, default.get('wrapperSize'));
-      p5.noFill();
-      p5.stroke(
+      form.get("connections").forEach(that.drawConnection);
+      p5.noStroke();
+      p5.fill(
         circleColor.hue,
         circleColor.saturation,
         circleColor.brightness,
@@ -29,7 +30,6 @@ export const Drawer = (p5) => {
         circle.get("size"),
         circle.get("size")
       );
-      form.get("connections").forEach(that.drawConnection);
     }
   };
 
@@ -40,7 +40,9 @@ export const Drawer = (p5) => {
   };
 
   that.drawConnection = (connection) => {
+    p5.noFill()
     p5.strokeWeight(defaults.get("lineWeight"));
+    p5.stroke(defaults.get("mainHue"), 50, 30)
     p5.bezier(
       connection.get("startPoint").x,
       connection.get("startPoint").y,
